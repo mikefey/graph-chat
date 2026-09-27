@@ -1,0 +1,9 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+
+# Secrets — LLM provider config lives here, never in the repo
+.env
+.env.*
+!.env.example
