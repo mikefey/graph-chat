@@ -1,5 +1,5 @@
 {
-  "name": "relational-chat",
+  "name": "graph-chat",
   "private": true,
   "type": "module",
   "scripts": {

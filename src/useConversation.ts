@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ROOT_ID, type ChatNode, type Tree } from './types';
 
-const STORAGE_KEY = 'relational-chat:v1';
+const STORAGE_KEY = 'graph-chat:v1';
+const LEGACY_STORAGE_KEY = 'relational-chat:v1';
 
 function freshTree(): Tree {
   return {
@@ -11,7 +12,9 @@ function freshTree(): Tree {
 
 function loadTree(): Tree {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? 'null') as Tree | null;
+    const saved = JSON.parse(
+      localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(LEGACY_STORAGE_KEY) ?? 'null',
+    ) as Tree | null;
     if (!saved?.[ROOT_ID]) return freshTree();
     // A reload kills any in-flight stream.
     for (const n of Object.values(saved)) {

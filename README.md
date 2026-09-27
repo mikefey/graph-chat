@@ -1,4 +1,4 @@
-# Relational Chat
+# Graph Chat
 
 An LLM chat where every message is a node in a force-directed graph. Replies spawn new nodes
 linked to the message before them. Click any earlier node to branch the conversation from there.

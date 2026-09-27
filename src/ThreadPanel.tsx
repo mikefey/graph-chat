@@ -42,7 +42,7 @@ export function ThreadPanel({ tree, path, selected, model, onSelect, onSend, onR
     <aside className="panel">
       <header>
         <div>
-          <h1>Relational Chat</h1>
+          <h1>Graph Chat</h1>
           {model && <span className="model">{model}</span>}
         </div>
         <div className="actions">
