@@ -1,5 +1,7 @@
 # Graph Chat
 
+https://github.com/user-attachments/assets/495997f4-003c-48cc-be34-95edff5b4263
+
 An LLM chat where every message is a node in a force-directed graph. Replies spawn new nodes
 linked to the message before them. Click any earlier node to branch the conversation from there.
 
