@@ -200,7 +200,7 @@ export function Graph({ tree, selectedId, activePath, onSelect }: Props) {
                 <title>{n.role === 'root' ? 'Start a new conversation' : n.content}</title>
                 <circle className="halo" r={r + 6} />
                 <circle r={r} />
-                <text x={r + 6} dy="0.35em">
+                <text x={r + 14} dy="0.35em">
                   {n.role === 'root' ? 'start' : snippet(n.content) || '…'}
                 </text>
               </g>
